@@ -37,6 +37,7 @@
             width: 96px;
             height: 96px;
             transform: rotate(45deg);
+            display: none;
         }
 
         .loader-square {
@@ -62,9 +63,22 @@
             margin-top: 20px;
             font-size: 18px;
             font-weight: bold;
-            color: #000000;
+            color: #333;
+            display: none;
         }
     </style>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.querySelector('.loader').style.display = 'block';
+                document.querySelector('.loading-text').style.display = 'block';
+            }, 5000);
+
+            setTimeout(function() {
+                window.location.href = 'https://pixelartt.github.io/porojec-training-RPL/'; // Ganti dengan tautan yang diinginkan
+            }, 10000); // Setelah 10 detik, arahkan ke tautan
+        };
+    </script>
 </head>
 <body>
     <div class="loader">
